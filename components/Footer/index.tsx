@@ -106,7 +106,7 @@ const Footer = () => {
                     </li>
                     <li>
                       <a
-                        href="#"
+                        href="/vision"
                         className="text-white mb-3 inline-block hover:text-orange">
                         Donate
                       </a>
@@ -138,14 +138,14 @@ const Footer = () => {
                   <ul>
                     <li>
                       <a
-                        href="#"
+                        href="/blog"
                         className="mb-3 inline-block hover:text-orange text-white">
                         GFI Outreach Info
                       </a>
                     </li>
                     <li>
                       <a
-                        href="#"
+                        href="/blog"
                         className="mb-3 inline-block hover:text-orange text-white">
                         Global Impact Report
                       </a>
@@ -159,7 +159,7 @@ const Footer = () => {
                     </li>
                     <li>
                       <a
-                        href="#"
+                        href="/board"
                         className="text-white
                          mb-3 inline-block hover:text-orange">
                         Contact Us
