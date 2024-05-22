@@ -44,7 +44,7 @@ const Header = () => {
               className="hidden w-full dark:block"
             />
             <Image
-              src="/images/logo/graceforimpact-logo-1.jpeg"
+              src="/images/logo/logo.svg"
               alt="logo"
               width={119.03}
               height={30}
