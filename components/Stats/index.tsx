@@ -34,7 +34,7 @@ const cardData: CardDataType[] = [
 const Stats = () => {
   return (
     <div className="mx-auto max-w-7xl py-16 px-6">
-      <div className="text-left mb-12">
+      <div className="text-center mb-12">
         <h2 className="text-5xl font-extrabold text-gray-900">Our Impact</h2>
         <p className="mt-2 text-lg text-gray-600">
           Each year, we strive to transform lives and strengthen communities

@@ -8,6 +8,7 @@ import Network from "@/components/Network";
 import Stats from "@/components/Stats";
 import Gallery from "@/components/Gallery";
 import Blog from "@/components/Blog";
+import WhoWeAre from "@/components/WhoWeAre/WhoWeAre";
 
 export const metadata: Metadata = {
   title: "GraceForImpact-Non-profit Health care organization",
@@ -21,7 +22,7 @@ export default function Home() {
       <Companies />
       <Stats />
       <CTA />
-      <Blog />
+      <WhoWeAre />
       <ImpactStat />
       <Gallery />
       <Features />
