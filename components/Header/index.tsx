@@ -3,7 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-
 import menuData from "./menuData";
 
 const Header = () => {
@@ -24,7 +23,10 @@ const Header = () => {
 
   useEffect(() => {
     window.addEventListener("scroll", handleStickyMenu);
-  });
+    return () => {
+      window.removeEventListener("scroll", handleStickyMenu);
+    };
+  }, []);
 
   return (
     <header
@@ -34,30 +36,26 @@ const Header = () => {
           : ""
       }`}>
       <div className="relative mx-auto max-w-c-1390 items-center justify-between px-4 md:px-8 xl:flex 2xl:px-0">
-        <div className="flex w-full items-center justify-between xl:w-1/4">
+        {/* Logo Container */}
+        <div className="absolute -top-4 left-4 xl:left-8 bg-white p-4 rounded-lg flex items-center justify-center w-60 h-22 z-10">
           <a href="/">
             <Image
               src="/images/logo/logo.svg"
               alt="logo"
-              width={119.03}
-              height={30}
-              className="hidden w-full dark:block"
-            />
-            <Image
-              src="/images/logo/logo.svg"
-              alt="logo"
-              width={100.03}
-              height={30}
-              className="w-full dark:hidden"
+              width={100}
+              height={100}
+              className="w-full h-full object-contain"
             />
           </a>
+        </div>
 
+        <div className="flex w-full items-center justify-between xl:w-1/4 pl-40 xl:pl-48">
           {/* <!-- Hamburger Toggle BTN --> */}
           <button
             aria-label="hamburger Toggler"
             className="block xl:hidden"
             onClick={() => setNavigationOpen(!navigationOpen)}>
-            <span className=" bg-purple relative block h-5.5 w-5.5 cursor-pointer">
+            <span className="bg-purple relative block h-5.5 w-5.5 cursor-pointer">
               <span className="absolute right-0 block h-full w-full">
                 <span
                   className={`relative left-0 top-0 my-1 block h-0.5 rounded-sm bg-black delay-[0] duration-200 ease-in-out dark:bg-white ${
@@ -87,7 +85,7 @@ const Header = () => {
           {/* <!-- Hamburger Toggle BTN --> */}
         </div>
 
-        {/* Nav Menu Start   */}
+        {/* Nav Menu Start */}
         <div
           className={`invisible h-0 w-full items-center justify-between xl:visible xl:flex xl:h-auto xl:w-full ${
             navigationOpen &&
@@ -116,7 +114,7 @@ const Header = () => {
                       <ul
                         className={`dropdown ${dropdownToggler ? "flex" : ""}`}>
                         {menuItem.submenu.map((item, key) => (
-                          <li key={key} className=" hover:text-primary">
+                          <li key={key} className="hover:text-primary">
                             <Link href={item.path || "#"}>{item.title}</Link>
                           </li>
                         ))}
@@ -139,8 +137,6 @@ const Header = () => {
           </nav>
 
           <div className="mt-7 flex items-center gap-6 xl:mt-0">
-            {/* <ThemeToggler /> */}
-
             <Link
               href="https://graceforimpact.org"
               className="text-regular font-medium text-white hover:text-white">
@@ -154,20 +150,11 @@ const Header = () => {
               }`}>
               Donate
             </Link>
-            {/* <Link
-              href="https://graceforimpact.org"
-              className={`bg-purple flex items-center justify-center rounded-full px-7.5 py-2.5 text-regular text-white duration-300 ease-in-out ${
-                stickyMenu ? "bg-orange" : ""
-              }`}>
-              Donate
-            </Link> */}
           </div>
         </div>
       </div>
     </header>
   );
 };
-
-// w-full delay-300
 
 export default Header;
