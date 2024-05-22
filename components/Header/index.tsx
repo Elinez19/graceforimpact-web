@@ -37,7 +37,7 @@ const Header = () => {
       }`}>
       <div className="relative mx-auto max-w-c-1390 items-center justify-between px-4 md:px-8 xl:flex 2xl:px-0">
         {/* Logo Container */}
-        <div className="absolute -top-4 left-4 xl:left-8 bg-white p-4 rounded-lg flex items-center justify-center w-60 h-22 z-10">
+        <div className="absolute -top-4 left-4 xl:left-8 bg-white p-4 rounded-lg flex items-center justify-center w-60 h-32 z-10">
           <a href="/">
             <Image
               src="/images/logo/logo.svg"
