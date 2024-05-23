@@ -25,9 +25,6 @@ const data = [
     imgSrc: "/images/carousel/Partner-3.png",
   },
   {
-    imgSrc: "/images/carousel/Partner-3.png",
-  },
-  {
     imgSrc: "/images/carousel/logo.png",
   },
   {
