@@ -7,28 +7,31 @@ import "slick-carousel/slick/slick-theme.css";
 // IMAGES DATA FOR CAROUSEL
 const data = [
   {
-    imgSrc: "/images/carousel/google.svg",
+    imgSrc: "/images/carousel/Axxess-Logo.png",
   },
   {
-    imgSrc: "/images/carousel/garnier.png",
+    imgSrc: "/images/carousel/Brothers-Brother.png",
   },
   {
-    imgSrc: "/images/carousel/slack.png",
+    imgSrc: "/images/carousel/c-charities.png",
   },
   {
-    imgSrc: "/images/carousel/udemy.png",
+    imgSrc: "/images/carousel/CDA-small-300x90.jpg",
   },
   {
-    imgSrc: "/images/carousel/google.svg",
+    imgSrc: "/images/carousel/free-wchair.png",
   },
   {
-    imgSrc: "/images/carousel/garnier.png",
+    imgSrc: "/images/carousel/Partner-3.png",
   },
   {
-    imgSrc: "/images/carousel/slack.png",
+    imgSrc: "/images/carousel/Partner-3.png",
   },
   {
-    imgSrc: "/images/carousel/udemy.png",
+    imgSrc: "/images/carousel/logo.png",
+  },
+  {
+    imgSrc: "/images/carousel/sprinctime.png",
   },
 ];
 
