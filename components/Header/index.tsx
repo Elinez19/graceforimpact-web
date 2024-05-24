@@ -109,9 +109,13 @@ const Header = () => {
                       </button>
 
                       <ul
-                        className={`dropdown ${dropdownToggler ? "flex" : ""}`}>
+                        className={`bg-black dropdown ${
+                          dropdownToggler ? "flex bg-black" : ""
+                        }`}>
                         {menuItem.submenu.map((item, key) => (
-                          <li key={key} className="text-white hover:text-white">
+                          <li
+                            key={key}
+                            className="hover:bg-orange text-white hover:text-white rounded-md px-2">
                             <Link href={item.path || "#"}>{item.title}</Link>
                           </li>
                         ))}
