@@ -80,7 +80,7 @@ const AgricultureThree = () => {
                 <h2 className="text-3xl font-bold tracking-tight text-purple">
                   {section.title}
                 </h2>
-                <div className="mt-2 flex justify-center">
+                <div className="mt-2 -ml-72 flex justify-center">
                   <span className="inline-block h-2 w-30 rounded-full bg-orange"></span>
                 </div>
                 <p className="mt-4 text-lg text-gray-700">
