@@ -1,8 +1,8 @@
-"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+
 import menuData from "./menuData";
 
 const Header = () => {
@@ -30,53 +30,50 @@ const Header = () => {
 
   return (
     <header
-      className={`bg-orange fixed left-0 top-0 z-99999 w-full py-7 ${
-        stickyMenu
-          ? "bg-purple !py-4 shadow transition duration-100 dark:bg-black"
-          : ""
+      className={`fixed bg-orange left-0 top-0 z-99999 w-full py-7 ${
+        stickyMenu ? "bg-purple !py-4 shadow transition duration-100" : ""
       }`}>
       <div className="relative mx-auto max-w-c-1390 items-center justify-between px-4 md:px-8 xl:flex 2xl:px-0">
-        {/* Logo Container */}
-        <div className="absolute -top-6 left-4 xl:left-8 bg-white p-4 rounded-lg flex items-center justify-center w-60 h-20 z-10">
+        <div className="flex w-full items-center justify-between xl:w-1/4">
           <a href="/">
-            <Image
-              src="/images/logo/logo.svg"
-              alt="logo"
-              width={100}
-              height={100}
-              className="w-full h-full object-contain"
-            />
+            <div className="flex items-center justify-center rounded-lg bg-gray-100 p-2 ">
+              <Image
+                src="/images/logo/logo.svg"
+                alt="logo"
+                width={160}
+                height={80}
+                className="w-40 h-20"
+              />
+            </div>
           </a>
-        </div>
 
-        <div className="flex w-full items-center justify-between xl:w-1/4 pl-40 xl:pl-48">
           {/* <!-- Hamburger Toggle BTN --> */}
           <button
             aria-label="hamburger Toggler"
             className="block xl:hidden"
             onClick={() => setNavigationOpen(!navigationOpen)}>
-            <span className="bg-purple relative block h-5.5 w-5.5 cursor-pointer">
+            <span className="relative block h-5.5 w-5.5 cursor-pointer">
               <span className="absolute right-0 block h-full w-full">
                 <span
-                  className={`relative left-0 top-0 my-1 block h-0.5 rounded-sm bg-black delay-[0] duration-200 ease-in-out dark:bg-white ${
+                  className={`relative left-0 top-0 my-1 block h-0.5 rounded-sm bg-white  delay-[0] duration-200 ease-in-out ${
                     !navigationOpen ? "!w-full delay-300" : "w-0"
                   }`}></span>
                 <span
-                  className={`relative left-0 top-0 my-1 block h-0.5 rounded-sm bg-black delay-150 duration-200 ease-in-out dark:bg-white ${
+                  className={`relative left-0 top-0 my-1 block h-0.5 rounded-sm bg-white delay-150 duration-200 ease-in-out ${
                     !navigationOpen ? "delay-400 !w-full" : "w-0"
                   }`}></span>
                 <span
-                  className={`relative left-0 top-0 my-1 block h-0.5 rounded-sm bg-black delay-200 duration-200 ease-in-out dark:bg-white ${
+                  className={`relative left-0 top-0 my-1 block h-0.5 rounded-sm bg-white delay-200 duration-200 ease-in-out ${
                     !navigationOpen ? "!w-full delay-500" : "w-0"
                   }`}></span>
               </span>
               <span className="du-block absolute right-0 h-full w-full rotate-45">
                 <span
-                  className={`absolute left-2.5 top-0 block h-full w-0.5 rounded-sm bg-black delay-300 duration-200 ease-in-out dark:bg-white ${
+                  className={`absolute left-2.5 top-0 block h-full w-0.5 rounded-sm bg-black delay-300 duration-200 ease-in-out ${
                     !navigationOpen ? "!h-0 delay-[0]" : "h-full"
                   }`}></span>
                 <span
-                  className={`delay-400 absolute left-0 top-2.5 block h-0.5 w-full rounded-sm bg-black duration-200 ease-in-out dark:bg-white ${
+                  className={`delay-400 absolute left-0 top-2.5 block h-0.5 w-full rounded-sm bg-black duration-200 ease-in-out ${
                     !navigationOpen ? "!h-0 delay-200" : "h-0.5"
                   }`}></span>
               </span>
@@ -85,11 +82,11 @@ const Header = () => {
           {/* <!-- Hamburger Toggle BTN --> */}
         </div>
 
-        {/* Nav Menu Start */}
+        {/* Nav Menu Start   */}
         <div
           className={`invisible h-0 w-full items-center justify-between xl:visible xl:flex xl:h-auto xl:w-full ${
             navigationOpen &&
-            "navbar bg-orange !visible mt-4 h-auto max-h-[400px] rounded-md p-7.5 shadow-solid-5 dark:bg-blacksection xl:h-auto xl:p-0 xl:shadow-none xl:dark:bg-transparent"
+            "navbar !visible mt-4 h-auto max-h-[400px] rounded-md bg-black  p-7.5 shadow-solid-5"
           }`}>
           <nav>
             <ul className="flex flex-col gap-5 xl:flex-row xl:items-center xl:gap-10">
@@ -99,11 +96,11 @@ const Header = () => {
                     <>
                       <button
                         onClick={() => setDropdownToggler(!dropdownToggler)}
-                        className="flex cursor-pointer items-center justify-between gap-3 text-white hover:text-orange">
+                        className="flex text-white cursor-pointer items-center justify-between gap-3 hover:text-white">
                         {menuItem.title}
                         <span>
                           <svg
-                            className="h-3 w-3 cursor-pointer fill-white group-hover:fill-orange"
+                            className="h-3 w-3 cursor-pointer fill-white group-hover:fill-white"
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 512 512">
                             <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" />
@@ -112,13 +109,9 @@ const Header = () => {
                       </button>
 
                       <ul
-                        className={`dropdown ${
-                          dropdownToggler ? "flex" : ""
-                        } bg-purple p-4 rounded-lg`}>
+                        className={`dropdown ${dropdownToggler ? "flex" : ""}`}>
                         {menuItem.submenu.map((item, key) => (
-                          <li
-                            key={key}
-                            className="hover:bg-orange text-white hover:text-white rounded-md px-2">
+                          <li key={key} className="text-white hover:text-white">
                             <Link href={item.path || "#"}>{item.title}</Link>
                           </li>
                         ))}
@@ -127,9 +120,11 @@ const Header = () => {
                   ) : (
                     <Link
                       href={`${menuItem.path}`}
-                      className={`${
-                        pathUrl === menuItem.path ? "text-orange" : "text-white"
-                      } hover:text-orange`}>
+                      className={
+                        pathUrl === menuItem.path
+                          ? "text-white hover:text-primary"
+                          : "hover:text-primary"
+                      }>
                       {menuItem.title}
                     </Link>
                   )}
@@ -139,17 +134,16 @@ const Header = () => {
           </nav>
 
           <div className="mt-7 flex items-center gap-6 xl:mt-0">
+            {/* ThemeToggler component removed */}
             <Link
-              href="https://graceforimpact.org"
-              className="text-regular font-medium text-white hover:text-orange">
+              href="/getinvolved"
+              className="text-regular font-medium text-white hover:text-purple">
               Get Involved
             </Link>
 
             <Link
-              href="https://graceforimpact.org"
-              className={`bg-purple flex items-center justify-center rounded-full px-7.5 py-2.5 text-regular text-white duration-300 ease-in-out hover:bg-orange ${
-                stickyMenu ? "bg-orange" : ""
-              }`}>
+              href="/getinvolved"
+              className="flex items-center justify-center rounded-full bg-purple px-7.5 py-2.5 text-regular text-white duration-300 ease-in-out hover:bg-purple/80">
               Donate
             </Link>
           </div>
