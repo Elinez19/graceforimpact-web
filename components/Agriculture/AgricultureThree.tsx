@@ -38,7 +38,7 @@ const AgricultureThree = () => {
     <div className="relative overflow-hidden bg-white py-16 space-y-24">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <h1 className="text-4xl font-bold text-purple">
-          Health Outreach Programs
+          Agriculture Empowerment Programs
         </h1>
         <p className="mt-2 text-lg text-purple">
           Empowering young people to reach their full potential.
