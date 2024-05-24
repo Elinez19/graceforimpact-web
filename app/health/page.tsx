@@ -18,7 +18,7 @@ const Vision = () => {
       <div className="relative min-h-screen">
         {/* Breadcrumb */}
         <div className="absolute top-0 right-0 mt-10 mr-4 z-10">
-          <Breadcrumb pageName="Vision" description="Our Vision" />
+          <Breadcrumb pageName="Health" description="Health" />
         </div>
 
         {/* Main content */}
