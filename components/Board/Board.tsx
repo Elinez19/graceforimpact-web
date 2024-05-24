@@ -1,35 +1,28 @@
 import Image from "next/image";
 
-const OurBoard = () => {
+const Board = () => {
   return (
     <>
-      <section className=" relative w-full min-h-screen bg-cover bg-fixed bg-center bg-no-repeat bg-blend-multiply overflow-hidden mt-24 mb-40">
+      <section className="relative w-full min-h-screen bg-cover bg-fixed bg-center bg-no-repeat bg-blend-multiply overflow-hidden mt-24 mb-40">
         <div className="area">
           <ul className="circles">
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+            {Array.from({ length: 10 }).map((_, index) => (
+              <li key={index}></li>
+            ))}
           </ul>
         </div>
         <div className="relative z-10 mx-auto px-4 py-24 text-center lg:py-16 lg:flex lg:items-center lg:justify-between">
           <div className="lg:max-w-2xl">
-            <h1 className="mt-14 text-3xl font-bold leading-none tracking-tight text-white md:text-4xl lg:text-5xl">
-              Our Board of Directors
+            <h1 className="mt-14 text-4xl font-extrabold leading-none tracking-tight text-white md:text-5xl lg:text-6xl text-center">
+              Our Board
             </h1>
-            <p className="mt-10 text-lg font-normal text-white sm:px-16 lg:px-0 lg:text-xl mr-60">
-              Executive Leadership
+            <p className="mt-10 text-lg font-normal text-white sm:px-16 lg:px-0 lg:text-xl text-center">
+              Compassionate Excellence Worldwide
             </p>
           </div>
         </div>
       </section>
-      <div className="absolute top-30 right-[70px] p-8 z-20">
+      <div className="absolute top-30 right-0 left-0 mx-auto p-8 z-20 lg:left-[696px]">
         <Image
           loading="lazy"
           width={500}
@@ -43,4 +36,4 @@ const OurBoard = () => {
   );
 };
 
-export default OurBoard;
+export default Board;

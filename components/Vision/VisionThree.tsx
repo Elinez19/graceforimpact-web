@@ -27,38 +27,32 @@ const sections: BoardMember[] = [
 
 const VisionThree = () => {
   return (
-    <div className="relative overflow-hidden bg-white py-16 space-y-24">
-      {sections.slice(0, 1).map((section, index) => (
-        <div key={index} className="relative">
-          <div className="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-flow-col-dense lg:grid-cols-2 lg:gap-24 lg:px-8 bg-gray-100 border border-gray-300 rounded-lg">
-            <div
-              className={`mx-auto max-w-xl px-6 lg:mx-0 lg:max-w-none lg:py-16 lg:px-0 ${
-                index % 2 === 1 ? "lg:col-start-2" : ""
-              }`}>
-              <div className="p-6 flex flex-col justify-between h-full">
+    <div className="relative overflow-hidden bg-white py-16">
+      {sections.map((section, index) => (
+        <div key={index} className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-24">
+            <div className="order-2 md:order-1">
+              <div className="p-6">
+                <h2 className="text-3xl font-bold tracking-tight text-red-700 mb-4">
+                  {section.title}
+                </h2>
+                <div className="flex justify-start mb-4">
+                  <span className="inline-block h-2 w-30 rounded-full bg-orange"></span>
+                </div>
+                <p className="text-lg text-gray-700 mb-6">
+                  {section.description}
+                </p>
                 <div>
-                  <h2 className="text-3xl font-bold tracking-tight text-red-700">
-                    {section.title}
-                  </h2>
-                  <div className="mt-2 flex justify-center -ml-90">
-                    <span className="inline-block h-2 w-30 rounded-full bg-orange"></span>
-                  </div>
-                  <p className="mt-4 text-lg text-gray-700">
-                    {section.description}
-                  </p>
-                  <div className="mt-6">
-                    <Link
-                      href={`board/${section.memberId}`}
-                      className="inline-flex rounded-lg bg-red-700 px-18 py-1.5 text-base font-semibold leading-7 text-white shadow-sm ring-1 ring-red-700 hover:bg-red-700 hover:ring-red-700"
-                      passHref>
-                      Learn More
-                    </Link>
-                  </div>
+                  <Link
+                    href={`board/${section.memberId}`}
+                    className="inline-block rounded-lg bg-red-700 px-6 py-3 text-base font-semibold leading-7 text-white shadow-sm ring-1 ring-red-700 hover:bg-red-800 hover:ring-red-800">
+                    Learn More
+                  </Link>
                 </div>
               </div>
             </div>
-            <div className="mt-12 sm:mt-16 lg:mt-0 flex justify-center items-center lg:block">
-              <div className="border border-gray-300 rounded-lg overflow-hidden max-w-full lg:max-w-none">
+            <div className="order-1 md:order-2">
+              <div className="border border-gray-300 rounded-lg overflow-hidden">
                 <Image
                   src={section.imgSrc}
                   alt={section.title}

@@ -16,18 +16,12 @@ const sections: AgricultureData[] = [
   {
     imgSrc: "/images/board/board-img-5.svg",
     videoId: "L61p2uyiMSo",
-    title: "Our Commitment to Support Rural Farmers",
+    title: "Our Commitment to Support Changemakers",
     description:
       "GFI has made a commitment to empower and support new generations of leaders who will shape the communities we all want to live in – young leaders who grow into thriving adults and will influence systems change, bridge social divides and give back. Through this collective effort, we can engage more young people and deepen their impact based on the needs and opportunities in their individual communities.",
     memberId: "1",
   },
-  {
-    imgSrc: "/images/board/board-img-5.svg",
-    videoId: "L61p2uyiMSo",
-    title: "EXECUTIVE V.P./CHIEF NETWORK EXPERIENCE OFFICER",
-    description: "Shawn Borzelleri",
-    memberId: "2",
-  },
+
   // Add more sections with memberId and videoId for each board member
 ];
 
@@ -44,17 +38,20 @@ const AgricultureThree = () => {
     <div className="relative overflow-hidden bg-white py-16 space-y-24">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <h1 className="text-4xl font-bold text-purple">
-          Agricultural Empowerment Programs
+          Health Outreach Programs
         </h1>
         <p className="mt-2 text-lg text-purple">
-          Empowering rural farmers to reach their full potential.
+          Empowering young people to reach their full potential.
         </p>
       </div>
-      {sections.slice(0, 1).map((section, index) => (
+      {sections.map((section, index) => (
         <div key={index} className="relative">
-          <div className="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-flow-col-dense lg:grid-cols-2 lg:gap-24 lg:px-8 bg-gray-100 border border-gray-300 rounded-lg">
-            <div className="mt-12 sm:mt-16 lg:mt-0 flex justify-center items-center lg:block">
-              <div className="relative border border-gray-300 rounded-lg overflow-hidden max-w-full lg:max-w-none">
+          <div
+            className={`max-w-7xl mx-auto px-6 lg:px-8 ${
+              index % 2 === 0 ? "lg:grid-cols-2" : "lg:grid-cols-2-reverse"
+            } lg:grid lg:gap-24 bg-gray-100 border border-gray-300 rounded-lg`}>
+            <div className="mt-12 sm:mt-16 lg:mt-0">
+              <div className="relative border border-gray-300 rounded-lg overflow-hidden">
                 <Image
                   src={section.imgSrc}
                   alt={section.title}
@@ -78,26 +75,24 @@ const AgricultureThree = () => {
                 </div>
               </div>
             </div>
-            <div className="mx-auto max-w-xl px-6 lg:mx-0 lg:max-w-none lg:py-16 lg:px-0">
-              <div className="p-6 flex flex-col justify-between h-full">
-                <div>
-                  <h2 className="text-3xl font-bold tracking-tight text-purple">
-                    {section.title}
-                  </h2>
-                  <div className="mt-2 flex justify-center -ml-90">
-                    <span className="inline-block h-2 w-30 rounded-full bg-orange"></span>
-                  </div>
-                  <p className="mt-4 text-lg text-gray-700">
-                    {section.description}
-                  </p>
-                  <div className="mt-6">
-                    <Link
-                      href="/blog/blog-details"
-                      className="inline-flex rounded-lg bg-purple px-18 py-1.5 text-base font-semibold leading-7 text-white shadow-sm ring-1 ring-purple hover:bg-purple/95 hover:ring-purple"
-                      passHref>
-                      Learn More
-                    </Link>
-                  </div>
+            <div className="px-6 lg:py-16 lg:px-0">
+              <div className="p-6">
+                <h2 className="text-3xl font-bold tracking-tight text-purple">
+                  {section.title}
+                </h2>
+                <div className="mt-2 flex justify-center">
+                  <span className="inline-block h-2 w-30 rounded-full bg-orange"></span>
+                </div>
+                <p className="mt-4 text-lg text-gray-700">
+                  {section.description}
+                </p>
+                <div className="mt-6">
+                  <Link
+                    href="/blog/blog-details"
+                    className="inline-block bg-purple px-6 py-2 text-base font-semibold leading-7 text-white shadow-sm ring-1 ring-purple hover:bg-purple/95 hover:ring-purple"
+                    passHref>
+                    Learn More
+                  </Link>
                 </div>
               </div>
             </div>

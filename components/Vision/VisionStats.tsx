@@ -1,3 +1,5 @@
+import React from "react";
+
 interface CardDataType {
   heading: string;
   percent: string;
@@ -41,17 +43,19 @@ const VisionStats = () => {
           worldwide.
         </p>
       </div>
-      <div className="grid sm:grid-cols-2 gap-y-20 gap-x-5">
-        {cardData.map((items, i) => (
-          <div className="flex flex-col justify-center items-center" key={i}>
-            <div className="text-4xl lg:text-6xl text-purple font-semibold text-center mt-5 bg-gray-200 p-2 w-96 rounded-lg">
-              {items.percent}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-y-20 gap-x-5">
+        {cardData.map((item, index) => (
+          <div
+            key={index}
+            className="flex flex-col justify-center items-center">
+            <div className="text-4xl lg:text-6xl text-purple font-semibold text-center mt-5 bg-gray-200 p-2 lg:w-96 rounded-lg">
+              {item.percent}
             </div>
-            <h3 className="text-2xl text-black font-semibold text-center lg:mt-6">
-              {items.heading}
+            <h3 className="text-2xl text-black font-semibold text-center mt-6 lg:mt-4">
+              {item.heading}
             </h3>
-            <p className="text-lg font-normal text-black text-center text-opacity-50 mt-2">
-              {items.subheading}
+            <p className="text-lg font-normal text-black text-center text-opacity-50 mt-2 lg:mt-4">
+              {item.subheading}
             </p>
           </div>
         ))}
