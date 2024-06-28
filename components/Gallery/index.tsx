@@ -44,20 +44,13 @@ const Gallery = () => {
             <div key={index} className="relative group">
               <div className="overflow-hidden rounded-3xl transform transition-transform duration-300 group-hover:scale-105">
                 <Image
-                  src={`/images/Gallery/gfi-gallery-${index + 1}.svg`}
+                  src={`/images/Gallery/grace-gallery-${index + 1}.svg`}
                   alt={`image-${index + 1}`}
-                  width={500}
-                  height={405}
-                  className="object-cover"
+                  width={700} // Updated width
+                  height={900} // Updated height
+                  className="object-cover h-full w-full"
                 />
-              </div>
-              <div className="absolute bottom-0 left-0 w-full flex flex-col items-center py-4 bg-purple/65 bg-opacity-50 rounded-b-lg transition-opacity duration-300 group-hover:opacity-0">
-                <h3 className="text-xl lg:text-2xl font-bold text-white">{`Image ${
-                  index + 1
-                }`}</h3>
-                <p className="text-sm lg:text-base font-medium text-white text-center">
-                  {descriptions[index]}
-                </p>
+                <div className="absolute inset-0 bg-gray-800 opacity-50 group-hover:opacity-0 transition-opacity duration-300"></div>
               </div>
             </div>
           ))}
