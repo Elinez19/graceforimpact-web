@@ -4,12 +4,12 @@ import { Fade } from "react-awesome-reveal";
 
 // Array of descriptions for each image
 const descriptions = [
-  "Our day and overnight camps empowered kids by building lifelong skills, confidence and friendships.",
-  "Our day and overnight camps empowered kids by building lifelong skills, confidence and friendships.",
-  "Our day and overnight camps empowered kids by building lifelong skills, confidence and friendships.",
-  "Our day and overnight camps empowered kids by building lifelong skills, confidence and friendships.",
-  "Our day and overnight camps empowered kids by building lifelong skills, confidence and friendships.",
-  "Our day and overnight camps empowered kids by building lifelong skills, confidence and friendships.",
+  "We have dedicated field teams in the countries we work",
+  "We have dedicated field teams in the countries we work",
+  "We have dedicated field teams in the countries we work",
+  "We have dedicated field teams in the countries we work",
+  "We have dedicated field teams in the countries we work",
+  "We have dedicated field teams in the countries we work",
 ];
 
 const Gallery = () => {
@@ -23,7 +23,7 @@ const Gallery = () => {
             cascade
             damping={1e-1}
             triggerOnce={true}>
-            <h2 className="text-pink-700 text-lg font-normal mb-3 tracking-widest uppercase ls-51">
+            <h2 className="text-orange text-lg font-normal mb-3 tracking-widest uppercase ls-51">
               Our Gallery
             </h2>
           </Fade>

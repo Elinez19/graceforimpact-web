@@ -27,7 +27,7 @@ const HomeOne = () => {
             develop meaningful and affordable solutions for proper eye care and
             eliminate visual impairment and avoidable blindness.
           </p>
-          <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          {/* <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
             <div>
               <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-orange text-white">
                 <PiCheckCircleDuotone size={36} />
@@ -64,7 +64,7 @@ const HomeOne = () => {
                 </p>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
       <div className="lg:flex-justify mx-auto my-10 flex max-w-7xl flex-col gap-3 px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:flex lg:flex-row lg:px-8 xl:mt-28"></div>

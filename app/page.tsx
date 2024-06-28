@@ -20,10 +20,10 @@ export default function Home() {
     <main>
       <HomePage />
       <Companies />
-      <Stats />
+      <ImpactStat />
+      {/* <Stats /> */}
       <CTA />
       <WhoWeAre />
-      <ImpactStat />
       <Gallery />
       <Features />
       <Network />

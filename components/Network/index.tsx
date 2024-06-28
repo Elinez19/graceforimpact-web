@@ -44,29 +44,6 @@ const network = () => {
           width={1400}
           height={800}
         />
-
-        {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-16 gap-y-4 lg:gap-x-8">
-          {Aboutdata.map((item, i) => (
-            <div key={i} className="bg-white rounded-2xl p-5 shadow-xl">
-              <div className="flex justify-start items-center gap-2">
-                <Image
-                  src={item.imgSrc}
-                  alt={item.imgSrc}
-                  width={55}
-                  height={55}
-                  className="mb-2"
-                />
-                <h4 className="text-xl font-medium text-black">
-                  {item.country}
-                </h4>
-              </div>
-              <hr />
-              <h4 className="text-lg font-normal text-black my-2">
-                {item.paragraph}
-              </h4>
-            </div>
-          ))}
-        </div> */}
       </div>
     </div>
   );

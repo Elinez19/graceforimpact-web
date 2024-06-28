@@ -4,12 +4,12 @@ import Image from "next/image";
 const HomeTwo = () => {
   return (
     <section className=" bg-purple/75 w-full bg-[url('/images/hero/banner-2.svg')] bg-cover bg-fixed bg-center bg-no-repeat bg-blend-multiply">
-      <div className="mx-auto  px-4 py-24 text-center lg:py-16">
+      <div className="mx-auto  px-4 py-14 text-center lg:py-24">
         <h1 className="mt-14 text-4xl font-extrabold leading-none tracking-tight text-white md:text-5xl lg:text-6xl">
-          Grace For Impact
+          Compassionate Excellence
         </h1>
         <p className="mt-10 text-lg font-normal text-white sm:px-16 lg:px-48 lg:text-xl">
-          Compassionate Excellence Worldwide
+        Grace for Impact is a non-profit, international development organization that focuses on access to quality health care and education in some of the poorest countries of the world- where the need is greatest.
         </p>
         <div className="mt-10 flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0">
           <a
